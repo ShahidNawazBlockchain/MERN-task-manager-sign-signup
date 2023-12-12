@@ -19,7 +19,7 @@ const Signup = () => {
   const handleSignup = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:4000/api/v1/register",
+        "https://mern-task-manager-sign-signup-3eefgxkfi-shahid-nawazs-projects.vercel.app/api/v1/register",
         formData
       );
 

@@ -4,7 +4,7 @@ import "./App.css";
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 import Signin from "./components/Auth/Login";
-import Signup from "./components/Auth/Signup";
+import Signup from "./components/Auth/Signup.jsx";
 import List from "./components/MainContent/List.jsx";
 
 function App() {
