@@ -6,7 +6,7 @@ import axios from "axios";
 const fetchData = async () => {
   try {
     const response = await axios.get(
-      "https://mern-task-manager-sign-signup-1v8z3u12f-shahid-nawazs-projects.vercel.app/api/v2/gettask"
+      "https://mern-task-manager-sign-signup.vercel.app/api/v2/gettask"
     );
     return response.data.tasks;
   } catch (error) {
@@ -43,8 +43,9 @@ const App = () => {
     try {
       if (formData.id) {
         // Update task
+
         await axios.put(
-          `https://mern-task-manager-sign-signup-1v8z3u12f-shahid-nawazs-projects.vercel.app/api/v2/update/${formData.id}`,
+          `http://localhost:4000/api/v2/update/${formData.id}`,
           formData
         );
         setSuccessMessage("Task updated successfully");
