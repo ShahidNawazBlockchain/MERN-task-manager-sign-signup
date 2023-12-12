@@ -2,13 +2,13 @@ const express = require("express");
 const db = require("./db");
 const cors = require("cors");
 const app = express();
-app.use(cors());
 const auth = require("./routes/auth");
 const list = require("./routes/list");
 db();
 app.use(express.json());
 app.use("/api/v1", auth);
 app.use("/api/v2", list);
+app.use(cors());
 
 const PORT = 4000;
 app.listen(PORT, () => {
