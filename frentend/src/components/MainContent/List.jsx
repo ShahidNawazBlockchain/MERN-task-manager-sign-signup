@@ -45,14 +45,14 @@ const App = () => {
         // Update task
 
         await axios.put(
-          `http://localhost:4000/api/v2/update/${formData.id}`,
+          `https://mern-task-manager-sign-signup.vercel.app/api/v2/update/${formData.id}`,
           formData
         );
         setSuccessMessage("Task updated successfully");
       } else {
         // Add new task
         await axios.post(
-          "https://mern-task-manager-sign-signup-1v8z3u12f-shahid-nawazs-projects.vercel.app/api/v2/addtask",
+          "https://mern-task-manager-sign-signup.vercel.app/api/v2/addtask",
           formData
         );
         setSuccessMessage("Task added successfully");
@@ -76,7 +76,7 @@ const App = () => {
   const handleDelete = async (id) => {
     try {
       await axios.delete(
-        `https://mern-task-manager-sign-signup-1v8z3u12f-shahid-nawazs-projects.vercel.app/api/v2/delete/${id}`
+        `https://mern-task-manager-sign-signup.vercel.app/api/v2/delete/${id}`
       );
 
       // Fetch updated data
