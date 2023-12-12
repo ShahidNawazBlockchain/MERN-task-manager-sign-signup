@@ -10,7 +10,7 @@ import List from "./components/MainContent/List.jsx";
 function App() {
   return (
     <BrowserRouter>
-      <div className="">
+      <div className="h-screen">
         <NavBar />
         <Routes>
           <Route path="/signin" element={<Signin />} />

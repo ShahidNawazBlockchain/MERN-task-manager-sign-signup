@@ -5,7 +5,9 @@ import axios from "axios";
 // Function to make API calls
 const fetchData = async () => {
   try {
-    const response = await axios.get("http://localhost:4000/api/v2/gettask");
+    const response = await axios.get(
+      "https://mern-task-manager-sign-signup-1v8z3u12f-shahid-nawazs-projects.vercel.app/api/v2/gettask"
+    );
     return response.data.tasks;
   } catch (error) {
     console.error("Error fetching data:", error);
@@ -42,13 +44,16 @@ const App = () => {
       if (formData.id) {
         // Update task
         await axios.put(
-          `http://localhost:4000/api/v2/update/${formData.id}`,
+          `https://mern-task-manager-sign-signup-1v8z3u12f-shahid-nawazs-projects.vercel.app/api/v2/update/${formData.id}`,
           formData
         );
         setSuccessMessage("Task updated successfully");
       } else {
         // Add new task
-        await axios.post("http://localhost:4000/api/v2/addtask", formData);
+        await axios.post(
+          "https://mern-task-manager-sign-signup-1v8z3u12f-shahid-nawazs-projects.vercel.app/api/v2/addtask",
+          formData
+        );
         setSuccessMessage("Task added successfully");
       }
 
@@ -69,7 +74,9 @@ const App = () => {
   // Function to handle task deletion
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:4000/api/v2/delete/${id}`);
+      await axios.delete(
+        `https://mern-task-manager-sign-signup-1v8z3u12f-shahid-nawazs-projects.vercel.app/api/v2/delete/${id}`
+      );
 
       // Fetch updated data
       const data = await fetchData();
