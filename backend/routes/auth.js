@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const User = require("../models/user");
-const bcrypt = require("bcrypt");
+
 
 //sign up
 //http://localhost:4000/api/v1/register
